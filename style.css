@@ -70,6 +70,10 @@ header {
     position: relative;
 }
 
+.hamburger--close {
+    transform: rotate(50deg);
+}
+
 .hamburger,
 .hamburger::before,
 .hamburger::after {
@@ -89,9 +93,18 @@ header {
     height: 1px;
 }
 
-.hamburger::after {
-    transform: translateY(7px);
+.hamburger--close::before {
+    transform: rotate(-100deg);
     height: 2px;
+}
+
+.hamburger::after {
+    transform: translateY(6px);
+    height: 2px;
+}
+
+.hamburger--close::after {
+    height: 0;
 }
 
 .logo {
@@ -102,11 +115,19 @@ header {
     min-height: 100vh;
     width: 65%;
     background-color: var(--almost-white);
-    transform: translateX(100%);
-
+    transition: transform 0.2s;
+    
     position: absolute;
     /* top: 0; */
     right: 0;
+}
+
+.nav__hidden {
+    transform: translateX(100%);
+}
+
+.nav__show {
+    transform: translateX(0%);
 }
 
 .nav__list {
@@ -116,7 +137,7 @@ header {
 
 .nav__list--primary {
     font-size: 1rem;
-    margin: 4rem 0 0 1.5rem;
+    margin: 1rem 0 0 1.5rem;
 }
 
 .nav__list--secondary {
@@ -127,6 +148,38 @@ header {
 
 .nav__item {
     padding: .8rem 0;
+}
+
+/* Tooltip container */
+.nav__tooltip {
+    position: relative;
+}
+
+/* Tooltip list*/
+.nav__tooltip--list {
+    visibility: hidden;
+    list-style: none;
+    height: 0;
+    width: 0;
+    margin: 0;
+}
+
+.nav__tooltip--list .nav__item {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.nav__tooltip:hover .nav__tooltip--list,
+.nav__tooltip:focus .nav__tooltip--list {
+    visibility: visible;
+    height: unset;
+    width: unset;
+    margin: 1rem 0 0 0;
+    background-color: aquamarine;
 }
 
 .nav__link {

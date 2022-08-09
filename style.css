@@ -53,7 +53,7 @@ header {
     height: 3em;
     padding: 0em;
     background-color: var(--almost-white);
-    transition: opacity 250ms ease;
+    /* transition: opacity 250ms ease; */
     
     position: absolute;
     right: 5px;
@@ -150,18 +150,29 @@ header {
     padding: .8rem 0;
 }
 
-/* Tooltip container */
-.nav__tooltip {
-    position: relative;
+/* Style The Dropdown Button */
+.nav__dropbtn {
+    display: block;
 }
 
-/* Tooltip list*/
-.nav__tooltip--list {
-    visibility: hidden;
+/* Change color of dropdown links on hover */
+.nav__dropbtn:hover,
+.nav__dropbtn:focus {
+    cursor: pointer;
+    opacity: .75;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.nav__dropdown--content {
+    display: none;
     list-style: none;
-    height: 0;
-    width: 0;
-    margin: 0;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show-1, .show-2 {
+    display: block;
+    margin: .5rem 0 0 0;
+    z-index: 1;
 }
 
 .nav__tooltip--list .nav__item {
@@ -173,15 +184,6 @@ header {
     margin-right: 10px;
 }
 
-.nav__tooltip:hover .nav__tooltip--list,
-.nav__tooltip:focus .nav__tooltip--list {
-    visibility: visible;
-    height: unset;
-    width: unset;
-    margin: 1rem 0 0 0;
-    background-color: aquamarine;
-}
-
 .nav__link {
     text-decoration: none;
     color: var(--medium-gray);
@@ -189,6 +191,10 @@ header {
 
 .nav__arrow--icon {
     margin-left: 5px;
+}
+
+.arrow--up {
+    transform: rotate(180deg);
 }
 
 .nav__link--button {

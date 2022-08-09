@@ -27,16 +27,16 @@
 
         <nav class="nav nav__hidden">
           <ul class="nav__list nav__list--primary">
-            <li class="nav__item nav__tooltip"><a href="#" class="nav__link">Features</a><img src="./images/icon-arrow-down.svg" class="nav__arrow--icon"></img>
-              <ul class="nav__tooltip--list">
+            <li onclick="myFunc1()" class="nav__item nav__dropbtn"><a href="#" class="nav__link">Features<img src="./images/icon-arrow-down.svg" id="arrow-down-1" class="nav__arrow--icon"></a>
+              <ul id="myDropdown-1" class="nav__dropdown--content">
                 <li class="nav__item"> <img class="icon" src="./images/icon-todo.svg" alt="Todolist icon"> <a href="#" class="nav__link"> Todo List</a></li>
                 <li class="nav__item"> <img class="icon" src="./images/icon-calendar.svg" alt="Calender icon"> <a href="#" class="nav__link"> Calender</a></li>
                 <li class="nav__item"> <img class="icon" src="./images/icon-reminders.svg" alt="Reminders icon"> <a href="#" class="nav__link"> Reminders</a></li>
                 <li class="nav__item"> <img class="icon" src="./images/icon-planning.svg" alt="Planning icon"> <a href="#" class="nav__link"> Planning</a></li>
               </ul>
             </li>
-            <li class="nav__item nav__tooltip"><a href="#" class="nav__link">Company</a><img src="./images/icon-arrow-down.svg" class="nav__arrow--icon"></img>
-              <ul class="nav__tooltip--list">
+            <li onclick="myFunc2()" class="nav__item nav__dropbtn"><a href="#" class="nav__link">Company<img src="./images/icon-arrow-down.svg" id="arrow-down-2" class="nav__arrow--icon"></a>
+              <ul id="myDropdown-2" class="nav__dropdown--content">
                 <li class="nav__item"><a href="#" class="nav__link">History</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Our Team</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>

@@ -1,251 +1,360 @@
 :root {
-    --almost-white: hsl(0, 0%, 98%);
-    --medium-gray: hsl(0, 0%, 41%);
-    --almost-black: hsl(0, 0%, 8%);
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: 'Epilogue', sans-serif;
-    font-size: 1.1rem;
-    background-color: var(--almost-white);
+  margin: 0;
+  font-family: "Epilogue", sans-serif;
+  font-size: 1.1rem;
+  background-color: var(--almost-white);
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .btn {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--almost-white);
-    font-weight: 600;
-    letter-spacing: .8px;
-    background-color: var(--almost-black);
-    padding: .80em 1em;
-    border-radius: 10px;
-    border: none;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--almost-white);
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  background-color: var(--almost-black);
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  border: 2px solid var(--almost-black);
 }
 
 .btn:hover,
 .btn:focus {
-    opacity: .75; 
+  color: var(--almost-black);
+  background-color: var(--almost-white);
+  cursor: pointer;
 }
 
 .container {
-    width: 95%;
-    max-width: 1100px;
-    margin: 0 auto;
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 header {
-    padding: .5em 0;
+  padding: 0.5em 0;
 }
 
 .nav-toggle {
-    cursor: pointer;
-    border: 0;
-    width: 3em;
-    height: 3em;
-    padding: 0em;
-    background-color: var(--almost-white);
-    /* transition: opacity 250ms ease; */
-    
-    position: absolute;
-    right: 5px;
+  cursor: pointer;
+  border: 0;
+  width: 3em;
+  height: 3em;
+  padding: 0em;
+  background-color: var(--almost-white);
+  /* transition: opacity 250ms ease; */
+
+  position: absolute;
+  right: 5px;
 }
 
 .nav-toggle:focus,
 .nav-toggle:hover {
-    opacity: .75;
+  opacity: 0.75;
 }
 
 .hamburger {
-    width: 60%;
-    height: 2px;
-    position: relative;
+  width: 60%;
+  height: 2px;
+  position: relative;
 }
 
 .hamburger--close {
-    transform: rotate(50deg);
+  transform: rotate(50deg);
 }
 
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    display: block;
-    margin: 0 auto;
-    background-color: var(--almost-black);
+  display: block;
+  margin: 0 auto;
+  background-color: var(--almost-black);
 }
 
 .hamburger::before,
 .hamburger::after {
-    content: '';
-    width: 100%;
+  content: "";
+  width: 100%;
 }
 
 .hamburger::before {
-    transform: translateY(-7px);
-    height: 1px;
+  transform: translateY(-7px);
+  height: 2px;
 }
 
 .hamburger--close::before {
-    transform: rotate(-100deg);
-    height: 2px;
+  transform: rotate(-100deg);
+  height: 2px;
 }
 
 .hamburger::after {
-    transform: translateY(6px);
-    height: 2px;
+  transform: translateY(6px);
+  height: 2px;
 }
 
 .hamburger--close::after {
-    height: 0;
+  height: 0;
 }
 
 .logo {
-    height: 30px;
+  height: 30px;
 }
 
 .nav {
-    min-height: 100vh;
-    width: 65%;
-    background-color: var(--almost-white);
-    transition: transform 0.2s;
-    
-    position: absolute;
-    /* top: 0; */
-    right: 0;
+  min-height: 100vh;
+  width: 65%;
+  max-width: 250px;
+  background-color: var(--almost-white);
+  transition: transform 0.2s;
+
+  position: absolute;
+  /* top: 0; */
+  right: 0;
 }
 
 .nav__hidden {
-    transform: translateX(100%);
-}
-
-.nav__show {
-    transform: translateX(0%);
+  transform: translateX(100%);
+  display: none;
 }
 
 .nav__list {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .nav__list--primary {
-    font-size: 1rem;
-    margin: 1rem 0 0 1.5rem;
+  font-size: 1rem;
+  margin: 1rem 0 0 1.5rem;
 }
 
 .nav__list--secondary {
-    font-size: .8rem;
-    text-align: center;
-    padding: 0;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0;
 }
 
 .nav__item {
-    padding: .8rem 0;
+  padding: 0.8rem 0;
+}
+
+/* Change color of links on hover */
+.nav__link:hover,
+.nav__link:focus {
+    color: var(--almost-black);
 }
 
 /* Style The Dropdown Button */
 .nav__dropbtn {
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.nav__dropbtn:hover,
-.nav__dropbtn:focus {
-    cursor: pointer;
-    opacity: .75;
+  display: block;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .nav__dropdown--content {
-    display: none;
-    list-style: none;
+  display: none;
+  list-style: none;
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show-1, .show-2 {
-    display: block;
-    margin: .5rem 0 0 0;
-    z-index: 1;
+.show-1,
+.show-2 {
+  display: block;
+  margin: 0.5rem 0 0 0;
+  z-index: 1;
 }
 
 .nav__tooltip--list .nav__item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .icon {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .nav__link {
-    text-decoration: none;
-    color: var(--medium-gray);
+  text-decoration: none;
+  color: var(--medium-gray);
 }
 
 .nav__arrow--icon {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .arrow--up {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .nav__link--button {
-    padding: 0.75em 5.5em;
-    border: 2px solid var(--medium-gray);
-    border-radius: 1em;
-
+  padding: 0.75em 5.5em;
+  border: 2px solid var(--medium-gray);
+  border-radius: 1em;
 }
 
 .hero__text {
-    text-align: center;
+  text-align: center;
 }
 
 .hero__title {
-    font-size: 2.25rem;
+  font-size: 2.25rem;
 }
 
 .hero__text p {
-    color: var(--medium-gray);
-    font-size: 1rem;
-    line-height: 1.6;
+  color: var(--medium-gray);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .hero__icon {
-    margin: 3rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hero__icon img:nth-child(1) {
-    height: .8rem;
+  height: 0.8rem;
 }
 
 .hero__icon img:nth-child(2) {
-    height: 1.3rem;
+  height: 1.3rem;
 }
 
 .hero__icon img:nth-child(3) {
-    height: .8rem;
+  height: 0.8rem;
 }
 
 .hero__icon img:nth-child(4) {
-    height: 1.3rem;
+  height: 1.3rem;
 }
 
 .attribution {
-    font-size: 11px;
-    text-align: center; 
+  font-size: 11px;
+  text-align: center;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%); 
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 800px) {
+  .container {
+    margin-top: 3rem;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 8rem;
+  }
+
+  .btn {
+    width: 27%;
+    padding: 1em 1em;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    align-items: end;
+  }
+
+  .nav {
+    position: relative;
+    min-height: unset;
+    width: 100%;
+    max-width: unset;
+    transform: none;
+    right: unset;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+   .logo {
+    height: 100%;
+    margin-right: 4rem;
+  }
+
+  .nav__list {
+    display: flex;
+    margin: 0;
+  }
+
+  .nav__item {
+    margin-right: 2rem;
+  }
+
+  .nav__list--secondary {
+    font-size: 1rem;
+  }
+
+  .nav__link--button {
+    padding: 0.5em 1em;
+  }
+
+  .nav__dropdown--content {
+    position: absolute;
+    top: 40px;
+
+    background-color: var(--almost-white);
+    padding: 5px 0 10px 25px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.28);
+    box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.28);
+  }
+
+  .hero__text {
+    text-align: unset;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hero__title {
+    font-size: 4.8rem;
+    margin-bottom: 0;
+  }
+
+  .hero__icon {
+    margin-bottom: 0;
+  }
+  .hero__text p {
+    width: 80%;
+  }
+
+  .hero__icon img:nth-child(1) {
+    height: unset;
+  }
+
+  .hero__icon img:nth-child(2) {
+    height: unset;
+  }
+
+  .hero__icon img:nth-child(3) {
+    height: unset;
+  }
+
+  .hero__icon img:nth-child(4) {
+    height: unset;
+  }
 }

@@ -291,6 +291,7 @@ header {
    .logo {
     height: 100%;
     margin-right: 4rem;
+    margin-left: 2rem;
   }
 
   .nav__list {

@@ -26,10 +26,10 @@ navToggle.addEventListener('click', () => {
 toggle between hiding and showing the dropdown content */
 function myFunc1() {
   document.querySelector("#myDropdown-1").classList.toggle("show-1");
-  document.querySelector("#arrow-dwon-1").classList.toggle("arrow--up");
+  document.querySelector("#arrow-down-1").classList.toggle("arrow--up");
 }
 
 function myFunc2() {
   document.querySelector("#myDropdown-2").classList.toggle("show-2");
-  document.querySelector("#arrow-dwon-2").classList.toggle("arrow--up");
+  document.querySelector("#arrow-down-2").classList.toggle("arrow--up");
 }
